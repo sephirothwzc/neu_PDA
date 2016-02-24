@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+		xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		x:Class="neu_PDA.Login"
+		>
+	<ContentPage.Content>
+		<AbsoluteLayout>
+			<StackLayout
+				Spacing="0" 
+				AbsoluteLayout.LayoutBounds="0, 1, 1, AutoSize" 
+	         	AbsoluteLayout.LayoutFlags="YProportional,WidthProportional">
+	         	<Label 
+					x:Name="SplashTitle" 
+					Text="APF PDA登陆demo" 
+
+					XAlign="Center" 
+					YAlign="Center" 
+					HeightRequest="44" 
+					FontSize="Large"/>
+				<Label 
+					x:Name="UsernameTitleLabel" 
+					Text="测试1" 
+				
+					XAlign="Center" 
+					YAlign="End" 
+					HeightRequest="30" 
+					FontSize="Micro"/>
+				<Label 
+					x:Name="UsernameValueLabel" 
+					Text="名称" 
+		
+					XAlign="Center" 
+					YAlign="Start" 
+					HeightRequest="30" 
+					FontSize="Small"/>
+				<Label 
+					x:Name="PasswordTitleLabel" 
+					Text="密码" 
+
+					XAlign="Center" 
+					YAlign="End" 
+					HeightRequest="30" 
+					FontSize="Micro"/>
+				<Label 
+					x:Name="PasswordValueLabel" 
+					Text="密码2" 
+
+					XAlign="Center" 
+					YAlign="Start" 
+					HeightRequest="30" 
+					FontSize="Small"
+					/>
+				<Button x:Name="btn" Text="登陆" Clicked="Handle_Clicked"/>
+         		<Image Source="splashSlice" Aspect="AspectFit" />
+			</StackLayout>
+		</AbsoluteLayout>
+	</ContentPage.Content>
+</ContentPage>
