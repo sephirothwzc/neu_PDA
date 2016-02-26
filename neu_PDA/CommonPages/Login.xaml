@@ -20,7 +20,7 @@
 					FontSize="Large"/>
 				<Label 
 					x:Name="UsernameTitleLabel" 
-					Text="测试1" 
+					Text="扫描" 
 				
 					XAlign="Center" 
 					YAlign="End" 
@@ -51,7 +51,8 @@
 					HeightRequest="30" 
 					FontSize="Small"
 					/>
-				<Button x:Name="btn" Text="登陆" Clicked="Handle_Clicked"/>
+				<Button x:Name="btn" Text="登陆跳转" Clicked="Handle_Clicked" />
+				<Button x:Name="barcode" Text="测试登陆"/>
          		<Image Source="splashSlice" Aspect="AspectFit" />
 			</StackLayout>
 		</AbsoluteLayout>

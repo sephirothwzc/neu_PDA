@@ -19,7 +19,10 @@ namespace neu_PDA.Droid
 
 			global::Xamarin.Forms.Forms.Init(this, bundle);
 
+			App.getCLR = new GetCLR(new WebClient_clr());
+
 			LoadApplication(new App());
+
 		}
 	}
 }

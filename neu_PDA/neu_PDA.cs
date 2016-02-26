@@ -6,6 +6,7 @@ namespace neu_PDA
 {
 	public class App : Application
 	{
+		public static GetCLR getCLR { get; set; }
 		public App()
 		{
 			// The root page of your application

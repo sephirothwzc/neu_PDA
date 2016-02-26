@@ -14,6 +14,8 @@ namespace neu_PDA.iOS
 		{
 			// if you want to use a different Application Delegate class from "AppDelegate"
 			// you can specify it here.
+			App.getCLR = new GetCLR(new WebClient_clr());
+
 			UIApplication.Main(args, null, "AppDelegate");
 		}
 	}
