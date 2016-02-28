@@ -1,11 +1,12 @@
 ﻿using System;
-using System.Collections.Generic; 
+using System.Collections.Generic;
+using System.Text;
 
 namespace neu_PDA
 {
 	public interface IWebClient_clr
 	{
-		T WebRequest<T>(Uri uri, IDictionary<string, string> datas = null, string method = "POST", string charset = "UTF8") where T : new();
+		T WebRequest<T>(Uri uri, IDictionary<string, string> datas = null, string method = "POST", string charset = "UTF8");
 	}
 
 	public class GetCLR

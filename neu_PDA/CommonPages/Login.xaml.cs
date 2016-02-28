@@ -23,19 +23,19 @@ namespace neu_PDA
 
 			//初始化上下文
 
-			Uri uri = new Uri("http://58.211.118.189:8710/Web/Webservice/MES/WS_MESPPService.asmx/GetMESWcProTimeJson");
-			IDictionary<string, string> datas = new Dictionary<string, string>();
+			//Uri uri = new Uri("http://58.211.118.189:8710/Web/Webservice/MES/WS_MESPPService.asmx/GetMESWcProTimeJson");
+			//IDictionary<string, string> datas = new Dictionary<string, string>();
 
 
-			datas.Add("post", "10000");
-			datas.Add("commoit", JsonConvert.SerializeObject(new MESWcProTime
-			{
-				ROW_ID = "",
-				BUFFER1 = "111"
-			}));
+			//datas.Add("post", "10000");
+			//datas.Add("commoit", JsonConvert.SerializeObject(new MESWcProTime
+			//{
+			//	ROW_ID = "",
+			//	BUFFER1 = "111"
+			//}));
 
-			var str = GetCLR.webclient.WebRequest<List<MESWcProTime>>(uri, datas);
-			this.SplashTitle.Text = str.FirstOrDefault().ROW_ID;
+			//var str = GetCLR.webclient.WebRequest<List<MESWcProTime>>(uri, datas);
+			//this.SplashTitle.Text = str.FirstOrDefault().ROW_ID;
 
 			this.barcode.Clicked += (object sender, EventArgs e) => 
 			{
@@ -43,7 +43,7 @@ namespace neu_PDA
 				IDictionary<string, string> cudata = new Dictionary<string, string>();
 				cudata.Add("plant", "1000");
 				cudata.Add("userID", "bcsupport");
-				cudata.Add("password", "neusoft");
+				cudata.Add("password", "123");
 
 				UserDto user = GetCLR.webclient.WebRequest<UserDto>(new Uri(turl), cudata);
 				DisplayAlert("", user.UserName, "yes");
