@@ -21,6 +21,7 @@ namespace neu_PDA
 		{
 			InitializeComponent();
 
+			this.dp_time.Date = DateTime.Now;
 			//初始化上下文
 
 			//Uri uri = new Uri("http://58.211.118.189:8710/Web/Webservice/MES/WS_MESPPService.asmx/GetMESWcProTimeJson");
@@ -45,7 +46,8 @@ namespace neu_PDA
 				cudata.Add("userID", "bcsupport");
 				cudata.Add("password", "123");
 
-				UserDto user = GetCLR.webclient.WebRequest<UserDto>(new Uri(turl), cudata);
+				//UserDto user = GetCLR.webclient.WebRequest<UserDto>(new Uri(turl), cudata);
+				UserDto user = GetCLR.webclient.WebRequest<UserDto>(turl, cudata);
 				DisplayAlert("", user.UserName, "yes");
 			};
 		}

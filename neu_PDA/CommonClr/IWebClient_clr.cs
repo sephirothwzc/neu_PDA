@@ -6,7 +6,7 @@ namespace neu_PDA
 {
 	public interface IWebClient_clr
 	{
-		T WebRequest<T>(Uri uri, IDictionary<string, string> datas = null, string method = "POST", string charset = "UTF8");
+		T WebRequest<T>(string uri, IDictionary<string, string> datas = null, string method = "POST", string charset = "UTF8");
 	}
 
 	public class GetCLR

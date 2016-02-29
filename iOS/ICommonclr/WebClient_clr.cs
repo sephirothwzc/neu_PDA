@@ -22,7 +22,7 @@ namespace neu_PDA.iOS
 
 		}
 
-		public T WebRequest<T>(Uri uri, IDictionary<string, string> datas = null, string method = "POST", string charset = "UTF-8")
+		public T WebRequest<T>(string uri, IDictionary<string, string> datas = null, string method = "POST", string charset = "UTF-8")
 		{
 			var namevalues = datas.ToList().Select(d => string.Format(@"{0}:'{1}'",d.Key,d.Value)).ToArray();
 			string data = "{" + string.Join(",", namevalues) + "}";
@@ -30,7 +30,6 @@ namespace neu_PDA.iOS
 			string dwstring = string.Empty;//获取返回字符串
 			using (WebClient webClient = new WebClient())
 			{
-				//webClient.Encoding = (Encoding)Enum.Parse(typeof(Encoding), charset);
 				webClient.Headers["Method"] = method.ToString();
 				webClient.Headers["Content-Type"] = string.Format(@"application/json; charset={0}",charset);
 				dwstring = webClient.UploadString(uri, method, data);

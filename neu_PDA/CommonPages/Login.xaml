@@ -10,6 +10,10 @@
 				Spacing="0" 
 				AbsoluteLayout.LayoutBounds="0, 1, 1, AutoSize" 
 	         	AbsoluteLayout.LayoutFlags="YProportional,WidthProportional">
+			<DatePicker 
+				x:Name="dp_time"
+				Date="2016-02-01" 
+				/>
 	         	<Label 
 					x:Name="SplashTitle" 
 					Text="APF PDA登陆demo" 
@@ -53,6 +57,7 @@
 					/>
 				<Button x:Name="btn" Text="登陆跳转" Clicked="Handle_Clicked" />
 				<Button x:Name="barcode" Text="测试登陆"/>
+
          		<Image Source="splashSlice" Aspect="AspectFit" />
 			</StackLayout>
 		</AbsoluteLayout>
