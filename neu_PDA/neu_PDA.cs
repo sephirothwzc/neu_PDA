@@ -23,7 +23,7 @@ namespace neu_PDA
 			//		}
 			//	}
 			//};
-			MainPage = new Login();
+			MainPage = new NavigationPage(new Login());
 		}
 
 		protected override void OnStart()

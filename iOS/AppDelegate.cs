@@ -14,7 +14,7 @@ namespace neu_PDA.iOS
 		{
 			global::Xamarin.Forms.Forms.Init();
 
-			LoadApplication(new App());
+				LoadApplication(new App());
 
 			return base.FinishedLaunching(app, options);
 		}
